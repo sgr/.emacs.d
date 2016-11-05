@@ -1,3 +1,6 @@
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (load-theme 'tango-dark t)
+(setq inhibit-startup-message t)
+;;(global-hl-line-mode 1)
+(column-number-mode 1)

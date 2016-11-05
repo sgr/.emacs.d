@@ -1,8 +1,6 @@
 (el-get-bundle auto-complete)
-(el-get-bundle json-mode)
 (el-get-bundle less-css-mode)
 (el-get-bundle ruby-mode)
-(el-get-bundle paredit)
 (el-get-bundle flycheck)
 (el-get-bundle magit)
 (el-get-bundle markdown-mode)
