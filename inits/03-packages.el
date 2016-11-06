@@ -1,4 +1,5 @@
-(el-get-bundle auto-complete)
+(el-get-bundle! auto-complete
+  (ac-config-default))
 (el-get-bundle less-css-mode)
 (el-get-bundle ruby-mode)
 (el-get-bundle flycheck)
