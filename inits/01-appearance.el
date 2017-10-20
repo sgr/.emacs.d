@@ -2,7 +2,7 @@
 (tool-bar-mode 0)
 (load-theme 'tango-dark t)
 (setq inhibit-startup-message t)
-;;(global-hl-line-mode 1)
+;;(global-hl-line-mode t)
 (column-number-mode 1)
 
 (custom-set-variables
