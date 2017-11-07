@@ -19,27 +19,28 @@
   (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
   (add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode))
 
-;; Clojure
-(el-get-bundle! clojure-mode
-  (define-clojure-indent
-    (defroutes 'defun)
-    (GET 2)
-    (POST 2)
-    (PUT 2)
-    (DELETE 2)
-    (HEAD 2)
-    (ANY 2)
-    (context 2)))
+(when (and (<= 24 emacs-major-version) (<= 4 emacs-minor-version))
+  ;; Clojure
+  (el-get-bundle! clojure-mode
+    (define-clojure-indent
+      (defroutes 'defun)
+      (GET 2)
+      (POST 2)
+      (PUT 2)
+      (DELETE 2)
+      (HEAD 2)
+      (ANY 2)
+      (context 2)))
 
-;; Cider
-(el-get-bundle! cider
-  (setq nrepl-log-messages t)
-  (setq nrepl-hide-special-buffers t)
-  (setq nrepl-buffer-name-separator "-")
-  (setq nrepl-buffer-name-show-port t)
-  (setq cider-repl-display-in-current-window t)
-  (setq cider-repl-result-prefix ";; => ")
-  (setq cider-interactive-eval-result-prefix ";; => ")
-  (setq cider-repl-use-clojure-font-lock t)
-  (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-  (add-hook 'cider-mode-hook #'eldoc-mode))
+  ;; Cider
+  (el-get-bundle! cider
+    (setq nrepl-log-messages t)
+    (setq nrepl-hide-special-buffers t)
+    (setq nrepl-buffer-name-separator "-")
+    (setq nrepl-buffer-name-show-port t)
+    (setq cider-repl-display-in-current-window t)
+    (setq cider-repl-result-prefix ";; => ")
+    (setq cider-interactive-eval-result-prefix ";; => ")
+    (setq cider-repl-use-clojure-font-lock t)
+    (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+    (add-hook 'cider-mode-hook #'eldoc-mode)))
