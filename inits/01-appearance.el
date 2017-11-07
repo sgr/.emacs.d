@@ -1,5 +1,5 @@
 (menu-bar-mode 0)
-(tool-bar-mode 0)
+(if window-system (tool-bar-mode 0))
 (load-theme 'tango-dark t)
 (setq inhibit-startup-message t)
 ;;(global-hl-line-mode t)
