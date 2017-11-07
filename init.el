@@ -17,6 +17,6 @@
     (eval-print-last-sexp)))
 
 (el-get-bundle! emacs-jp/init-loader
-  ;; (setq-default init-loader-show-log-after-init nil)
+  (setq-default init-loader-show-log-after-init nil)
   (setq init-loader-byte-compile t)
   (init-loader-load "~/.emacs.d/inits"))
