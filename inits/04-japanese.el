@@ -5,5 +5,8 @@
 
 (set-language-environment "Japanese")
 
-(when (require 'mozc nil 'noerror)
+(cond
+ ((require 'mozc nil 'noerror)
   (setq default-input-method "japanese-mozc"))
+ ((require 'anthy nil 'noerror)
+  (setq default-input-method "japanese-anthy")))
