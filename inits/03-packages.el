@@ -8,3 +8,5 @@
 (el-get-bundle dockerfile-mode
   (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode)))
 (el-get-bundle arduino-mode)
+(el-get-bundle gnuplot
+  (add-to-list 'auto-mode-alist '("\\.gp$" . gnuplot-mode)))
