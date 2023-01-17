@@ -1,7 +1,11 @@
 *.elc
 ac-comphist.dat
 auto-save-list
+backup
+custom.el
 el-get
 elpa
 kkcrc
 network-security.data
+session*
+var
