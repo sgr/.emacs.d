@@ -1,4 +1,5 @@
 ;;; init.el --- My init.el  -*- lexical-binding: t; -*-
+;;; Commentary:
 ;;
 ;; Compile this file after it is edited
 ;;   emacs --batch -f batch-byte-compile init.el
@@ -83,13 +84,18 @@
             ;; (use-dialog-box . nil)
             ;; (use-file-dialog . nil)
             ;; (menu-bar-mode . t)
-            (tool-bar-mode . nil)
-            (scroll-bar-mode . nil)
-            (set-frame-font . "Ricty Diminished 14")
+            ;; (tool-bar-mode . nil)
+            ;; (scroll-bar-mode . nil)
+            ;;(set-frame-font . "Ricty Diminished 14")
             (indent-tabs-mode . nil))
   :config
   (defalias 'yes-or-no-p 'y-or-n-p)
   (keyboard-translate ?\C-h ?\C-?))
+
+(leaf editorconfig
+  :ensure t
+  :global-minor-mode t
+  :blackout t)
 
 ;; (leaf zenburn-theme
 ;;   :doc "A low contrast color theme for Emacs."
@@ -283,4 +289,7 @@
 
 (provide 'init)
 
+(setq custom-file "~/.emacs.d/custom.el")
+(if (file-exists-p (expand-file-name custom-file))
+    (load-file (expand-file-name custom-file)))
 ;;; init.el ends here
